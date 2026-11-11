@@ -1,0 +1,30 @@
+Merge these keys into the app.json that create-expo-app generated.
+Do not replace the whole file; keep the other keys it already has.
+
+{
+  "expo": {
+    "name": "Universal Cart",
+    "slug": "universal-cart",
+    "scheme": "ucart",
+    "android": {
+      "package": "com.yourname.ucart"
+    },
+    "ios": {
+      "bundleIdentifier": "com.yourname.ucart"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-share-intent",
+        {
+          "androidIntentFilters": ["text/*"],
+          "iosActivationRules": {
+            "NSExtensionActivationSupportsWebURLWithMaxCount": 1,
+            "NSExtensionActivationSupportsText": true
+          }
+        }
+      ]
+    ]
+  }
+}
