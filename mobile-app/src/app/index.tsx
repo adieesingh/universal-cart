@@ -48,7 +48,7 @@ export default function Cart() {
 
   // A link shared from Amazon / Flipkart / any app lands here.
   useEffect(() => {
-    if (!hasShareIntent || !token || handledIntent.current) return;
+    if (!hasShareIntent || !token ||  .current) return;
     const text = shareIntent.webUrl ?? shareIntent.text;
     if (!text) {
       resetShareIntent();

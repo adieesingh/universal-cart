@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import * as SecureStore from "expo-secure-store";
 
-type AuthCtx = {
+type AuthCtx = {    
   token: string | null;
   loading: boolean;
   signIn: (token: string) => Promise<void>;
